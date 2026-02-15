@@ -1,11 +1,9 @@
 <?php
 require_once 'connection.php';
 
-// Handle form submissions
 $message = '';
 $editEntry = null;
 
-// CREATE - Add new entry
 if (isset($_POST['add_entry'])) {
     $title = trim($_POST['title']);
     $content = trim($_POST['content']);
@@ -22,7 +20,6 @@ if (isset($_POST['add_entry'])) {
     }
 }
 
-// UPDATE - Update existing entry
 if (isset($_POST['update_entry'])) {
     $id = $_POST['id'];
     $title = trim($_POST['title']);
