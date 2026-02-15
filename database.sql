@@ -1,10 +1,7 @@
--- Create the database
 CREATE DATABASE IF NOT EXISTS journal_db;
 
--- Use the database
 USE journal_db;
 
--- Create the journal table
 CREATE TABLE IF NOT EXISTS journal (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -13,7 +10,6 @@ CREATE TABLE IF NOT EXISTS journal (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Insert sample data (optional)
 INSERT INTO journal (title, content) VALUES
 ('My First Entry', 'Today was a great day! I started learning PHP and MySQL.'),
 ('Learning Journey', 'I am building a journal application to practice CRUD operations.');
